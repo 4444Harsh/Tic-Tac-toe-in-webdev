@@ -21,7 +21,10 @@ const resetgame=()=>{
     turno=true
     enableboxes();
     msgcontainer.classList.add("hide");
+    resetbtn.style.display = "inline"
 }
+
+let count = 0;
 
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
@@ -34,7 +37,10 @@ boxes.forEach((box)=>{
             turno=true;
         }
         box.disabled=true;
-
+        if(count %2 == 0){
+            box.style.color = "green"
+        }
+        count = count + 1
         checkwinner();
     });
 });
@@ -56,6 +62,7 @@ const showwinner=(winner)=>{
     msg.innerText=`Congratulation, Winner is ${winner}`;
     msgcontainer.classList.remove("hide");
     disableboxes();
+    resetbtn.style.display = "none"
 }
 
 const checkwinner=()=>{
