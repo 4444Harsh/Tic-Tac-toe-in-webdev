@@ -1,13 +1,19 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 body{
     background-color: #548587;
     text-align: center;
 }
+
+h1 {
+    font-size: 2.4rem;
+    color: #1d2802;
+}
+
 .container{
-    height: 70vh;
+    height: 65vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -53,7 +59,7 @@ body{
 #msg{
     color:#ffffc7;
     font-size: 8vmin;
-
+    padding: 15px;
 }
 .msg-container{
     height: 30vmin;
